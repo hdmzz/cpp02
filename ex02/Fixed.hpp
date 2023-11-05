@@ -6,7 +6,7 @@
 /*   By: hdamitzi <hdamitzi@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 19:13:59 by hdamitzi          #+#    #+#             */
-/*   Updated: 2023/10/31 06:36:24 by hdamitzi         ###   ########.fr       */
+/*   Updated: 2023/10/31 13:26:28 by hdamitzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ public:
 	Fixed( Fixed const &src );
 	~Fixed();
 
-	Fixed	&operator=( Fixed const &rhs );
+	Fixed	&operator=( Fixed const &rhs ); 
 	int		getRawBits( void ) const;
 	void	setRawBits( int const raw );
 	float	toFloat(void ) const;
