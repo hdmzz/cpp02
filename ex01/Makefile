@@ -2,7 +2,7 @@ NAME = fixed
 
 # Compiler
 CC		= c++
-CFLAGS	= -Werror -Wextra -Wall -std=c++98 -g3
+CFLAGS	= -Werror -Wextra -Wall -std=c++98
 
 HEADERS		= Fixed.hpp
 

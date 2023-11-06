@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdamitzi <hdamitzi@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: hdamitzi <hdamitzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 19:13:56 by hdamitzi          #+#    #+#             */
-/*   Updated: 2023/10/31 02:21:07 by hdamitzi         ###   ########.fr       */
+/*   Updated: 2023/11/06 10:59:59 by hdamitzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ Fixed::Fixed(int const n) : _raw(n << _fractionnal)
 	return ;
 }
 
-//constructeru prenant un float constant
+//constructeur prenant un float constant
 Fixed::Fixed(float const f) : _raw( roundf(f * (1 << _fractionnal)))
 {
 	std::cout << "Float construcor called" << std::endl;
@@ -36,10 +36,10 @@ Fixed::Fixed(float const f) : _raw( roundf(f * (1 << _fractionnal)))
 }
 
 //copy constructor recopie src qui est une reference sur l'instance this
+	//dereference this et lui assigner la va valeur src qui est une reference
 Fixed::Fixed(Fixed const &src)
 {
 	std::cout << "Copy constructor called" << std::endl;
-	//dereference this et lui assigner la va valeur src qui est une reference
 	*this = src;
 	return ;
 }
@@ -71,6 +71,13 @@ Fixed &Fixed::operator=( Fixed const & src )
 		this->_raw = src.getRawBits();
 	return ( *this );
 }
+
+std::ostream& operator<<( std::ostream& os, const Fixed& nb )
+{
+	std::cout << nb.toFloat();
+	return (os);
+}
+
 /* 
 Par exemple:
 
@@ -107,7 +114,6 @@ void	Fixed::setRawBits(int const raw)
 	this->_raw = raw;
 }
 
-
 float	Fixed::toFloat( void ) const
 {
 	float	ret;
@@ -122,11 +128,4 @@ int		Fixed::toInt( void ) const
 
 	ret = _raw >> _fractionnal;
 	return (ret);
-}
-
-std::ostream& operator<<( std::ostream& os, const Fixed& nb )
-{
-	//appelle a la methode toFloat car elle englobe meme les entier qui peux le plus peux le moins
-	std::cout << nb.toFloat(); //pas besoin de mettre std::endl car la fonction return une ref sur ostream ce qui permet de chainer
-	return (os);
 }

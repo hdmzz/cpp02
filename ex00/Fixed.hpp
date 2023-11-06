@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdamitzi <hdamitzi@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: hdamitzi <hdamitzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/30 19:13:59 by hdamitzi          #+#    #+#             */
-/*   Updated: 2023/10/30 23:07:42 by hdamitzi         ###   ########.fr       */
+/*   Updated: 2023/11/06 10:54:56 by hdamitzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,10 +18,11 @@ class Fixed
 {
 public:
 	Fixed();
-	Fixed(Fixed const &src);//constructor de recopie
+	Fixed(Fixed const &src);
 	~Fixed();
 
 	Fixed &operator=(Fixed const &rhs);
+
 	int getRawBits(void) const;
 	void setRawBits(int const raw);
 private:

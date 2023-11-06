@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: hdamitzi <hdamitzi@student.42lyon.fr>      +#+  +:+       +#+        */
+/*   By: hdamitzi <hdamitzi@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 01:53:20 by hdamitzi          #+#    #+#             */
-/*   Updated: 2023/10/31 08:16:39 by hdamitzi         ###   ########.fr       */
+/*   Updated: 2023/11/06 11:02:29 by hdamitzi         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ int main( void )
 	Fixed b;
 
 	testMandatory();
-	return 0;
+	return (0);
 }
 
